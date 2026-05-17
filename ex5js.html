@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Pede o valor do carro e converte para número
+        let valorDoCarro = Number(prompt("Digite o valor do carro:"));
+
+        // Pede o ano de fabricação e converte para número
+        let ano = Number(prompt("Digite o ano de fabricação do carro:"));
+
+        // Declara a variável que vai receber o valor do seguro
+        let seguro;
+
+        // Verifica o ano e aplica a porcentagem correspondente
+        if (ano > 2024) {
+            // Carro fabricado após 2024: seguro de 5%
+            seguro = valorDoCarro * 0.05;
+
+        } else if (ano >= 2014 && ano <= 2024) {
+            // Carro fabricado entre 2014 e 2024: seguro de 10%
+            // && significa "E" — as duas condições precisam ser verdadeiras
+            seguro = valorDoCarro * 0.10;
+
+        } else {
+            // Carro fabricado antes de 2014: seguro de 15%
+            seguro = valorDoCarro * 0.15;
+        }
+
+        // Exibe o valor do seguro com 2 casas decimais
+        alert("O valor do seguro é: R$ " + seguro.toFixed(2));
+    </script>
+</body>
+
+</html>

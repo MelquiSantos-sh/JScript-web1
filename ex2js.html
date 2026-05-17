@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+<script>
+    // Pede o preço do produto e converte o valor para número
+    let preco = Number(prompt("Digite o preço do produto:"));
+
+    // Calcula 10% do preço (valor do desconto)
+    let desconto = preco * 0.10;
+
+    // Subtrai o desconto do preço original
+    let precoComDesconto = preco - desconto;
+
+    // Exibe o preço final com 2 casas decimais
+    // toFixed(2) formata o número com 2 casas decimais (ex: 135.00)
+    alert("Preço com 10% de desconto: R$ " + precoComDesconto.toFixed(2));
+</script>
+
+</body>
+
+</html>
